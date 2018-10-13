@@ -1,204 +1,241 @@
-<!--Japanese notes 
-	mimi = ear
-	men = face
-	me = eye
-	hana = nose
-	
--->
-
 <style type="text/css">
+  :root {
+    --back: #bada55;
+    --teddy: #8C5523;
+    --hearto: #f77e62;
+    --blush: 10px;
+  }
 
-body {
-  background: #0cd1ba;
-}
+  body {
+    background: var(--back);
+    text-align: center;
+    font-family: 'helvetica neue', sans-serif;
+    font-weight: 200;
+    font-size: 50px;
+    color:#fff; 
+  }
 
-.container,
-.ear, .face, .inner, .eye, .snout, .eyebrow, .heart, .shinny{
-  position: absolute;
-}
+  .container,
+  .ear,
+  .face,
+  .inner,
+  .eye,
+  .snout,
+  .eyebrow,
+  .heart,
+  .shinny {
+    position: absolute;
+  }
 
-.container {
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 200px;
-  height: 100px;
-}
+  .container {
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 200px;
+    height: 100px;
+  }
 
-.bruce {
-	margin: auto;
-	top: 100px;
-	  width: 200px;
-  height: 100px;
-}
+  .bruce {
+    margin: auto;
+    top: 100px;
+    width: 200px;
+    height: 100px;
+  }
 
-.ear {
-	top: -45px;
-	left: 13px;
-	}
+  .ear {
+    top: -45px;
+    left: 13px;
+  }
 
-.ear.right {
-  transform: translateX(75px);
-}
+  .ear.right {
+    transform: translateX(75px);
+  }
 
 
+  .face {
+    width: 200px;
+    height: 190px;
+    border-radius: 100%;
+    background: var(--teddy);
+  }
 
-.face {
-  width: 200px;
-  height: 190px;
-  border-radius: 100%;
-  background: #8C5523;
-}
+  .inner {
+    top: 23px;
+    left: -14px;
+    width: 60px;
+    height: 60px;
+    background: var(--teddy);
+    border-radius: 1000%;
+  }
 
-.inner {
-  top: 23px;
-  left: -14px;
-  width: 60px;
-  height: 60px;
-  background: #8C5523;
-  border-radius: 1000%;
-}
+  .inner.right {
+    left: 53px;
+  }
 
-.inner.right {
-  left: 53px;
-}
+  .eye {
+    top: 90px;
+    left: 55px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #000;
+  }
 
-.eye {
-  top: 90px;
-  left: 55px;
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-  background: #000;
-}
+  .eye.right {
+    transform: translateX(70px);
+  }
 
-.eye.right {
-  transform: translateX(70px);
-}
+  .snout {
+    top: 110px;
+    left: 75px;
+    width: 50px;
+    height: 45px;
+    background: #ffefd6;
+    border-radius: 100%;
+  }
 
-.snout {
-  top: 110px;
-  left: 75px;
-  width: 50px;
-  height: 45px;
-  background: #ffefd6;
-  border-radius: 100%;
-}
+  .nose {
+    position: absolute;
+    top: 4px;
+    left: 16px;
+    width: 15px;
+    height: 7px;
+    background: #333;
+    border-radius: 100%;
+  }
 
-.nose {
-  position: absolute;
-  top: 4px;
-  left: 16px;
-  width: 15px;
-  height: 7px;
-  background: #333;
-  border-radius: 100%;
-}
+  .bridge {
+    position: absolute;
+    top: 10px;
+    left: 23px;
+    width: 2px;
+    height: 13px;
+    background: #333;
+  }
 
-.bridge {
-  position: absolute;
-  top: 10px;
-  left: 23px;
-  width: 2px;
-  height: 13px;
-  background: #333;
-}
+  .mouth {
+    position: absolute;
+    width: 10px;
+    height: 7px;
+    border-radius: 0% 0% 100% 100%;
+    border-bottom: 3px solid;
+    top: 17px;
+    left: 15px;
+    color: #000;
+  }
 
-.mouth {
-  position: absolute;
-  width: 10px;
-  height: 7px;
-  border-radius: 0% 0% 100% 100%;
-  border-bottom: 3px solid;
-  top: 17px;
-  left: 15px;
-}
+  .mouth.right {
+    transform: translate(8px);
+  }
 
-.mouth.right {
-	transform: translate(8px);
-}
+  .shinny {
+    top: 10px;
+    left: 80px;
+    height: 10px;
+    width: 10px;
+    border-radius: 100px;
+    background: #fff;
+  }
 
-.shinny {
-	top: 10px;
-	left: 80px;
-	height: 10px;
-	width: 10px;
-	border-radius: 100px;
-	background: #fff;
-}
-
-/*.heart {
-	top: -110px;
-	left: 50px;
+  .heart {
+    top: -110px;
+    left: 50px;
     width: 90px;
     height: 80px;
-    background: 
-}
-.heart:before,
-.heart:after {
+  }
+
+  .heart:before,
+  .heart:after {
     position: absolute;
     content: "";
     left: 50px;
     top: 0;
     width: 50px;
     height: 80px;
-    background: #f77e62;
+    background: var(--hearto);
     -moz-border-radius: 50px 50px 0 0;
     border-radius: 50px 50px 0 0;
     -webkit-transform: rotate(-45deg);
-       -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-         -o-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
     -webkit-transform-origin: 0 100%;
-       -moz-transform-origin: 0 100%;
-        -ms-transform-origin: 0 100%;
-         -o-transform-origin: 0 100%;
-            transform-origin: 0 100%;
-}
-.heart:after {
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+  }
+
+  .heart:after {
     left: 0;
     -webkit-transform: rotate(45deg);
-       -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-         -o-transform: rotate(45deg);
-            transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
     -webkit-transform-origin: 100% 100%;
-       -moz-transform-origin: 100% 100%;
-        -ms-transform-origin: 100% 100%;
-         -o-transform-origin: 100% 100%;
-            transform-origin :100% 100%;
-}
-		*/			
-
-
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+  }
 </style>
 
 <head>
-	<body>
-	<div class="container">
-	<div class="shinny"></div>
-	<div class="heart"></div>
-	<div class="bruce">
-		<div class="ear">
-			<div class="inner"> </div>
-		</div>
-		<div class="ear right">
-			<div class="inner right"></div>
-		</div>
-		<div class="face">
-			<div class="eye"> </div>
-			<div class="eye right"> </div>
-			<div class="snout">
-				<div class="nose"> </div>
-				<div class="bridge"></div>
-				<div class="mouth"> </div>
-				<div class="mouth right"> </div>
-			</div>
-		</div>
-	</div>
-</div>
-	</body>
+
+<body>
+
+  <div class="controls">
+    <label for="hearto">Heart Color</label>
+    <input id="hearto" type="color" name="hearto" value="#f77e62">
+
+    <label for="teddy">Teddy's Fur</label>  
+    <input id="teddy" type="color" name="teddy" value="#8C5523">
+
+    <label for="back">Base Color</label>
+    <input id="back" type="color" name="back" value="#bada55">
+  </div>
+
+  <div class="container">
+    <div class="shinny"></div>
+    <div class="heart"></div>
+    <div class="bruce">
+      <div class="ear">
+        <div class="inner"> </div>
+      </div>
+      <div class="ear right">
+        <div class="inner right"></div>
+      </div>
+      <div class="face">
+        <div class="eye"> </div>
+        <div class="eye right"> </div>
+        <div class="snout">
+          <div class="nose"> </div>
+          <div class="bridge"></div>
+          <div class="mouth"> </div>
+          <div class="mouth right"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const inputs = document.querySelectorAll('.controls input');
+
+    function handleUpdate() {
+      // console.log(this.dataset); 
+      const suffix = this.dataset.sizing || '';
+      console.log(this.name);
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+
+    inputs.forEach(input => input.addEventListener('change', handleUpdate));
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+
+  </script>
+
+</body>
 </head>
